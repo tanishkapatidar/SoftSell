@@ -6,6 +6,9 @@ import Navbar from "@/components/Navbar";
 import HeroSection from "@/components/HeroSection";
 import HowItWorks from "@/components/HowItWorks";
 import WhyChooseUs from "@/components/WhyChooseUs";
+import Testimonials from "@/components/Testimonials";
+import ContactForm from "@/components/ContactForm";
+import Footer from "@/components/Footer";
 
 const Index = () => {
   // Use our custom hook to handle animations on scroll
@@ -51,6 +54,16 @@ const Index = () => {
       <div className="reveal">
         <WhyChooseUs />
       </div>
+
+      <div className="reveal">
+        <Testimonials />
+      </div>
+      
+      <div className="reveal">
+        <ContactForm />
+      </div>
+      
+      <Footer />
     </div>
   );
 };
