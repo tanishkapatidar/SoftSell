@@ -3,6 +3,9 @@ import React, { useEffect } from "react";
 import { motion, useAnimation, AnimatePresence } from "framer-motion";
 import { useInView } from "framer-motion";
 import Navbar from "@/components/Navbar";
+import HeroSection from "@/components/HeroSection";
+import HowItWorks from "@/components/HowItWorks";
+import WhyChooseUs from "@/components/WhyChooseUs";
 
 const Index = () => {
   // Use our custom hook to handle animations on scroll
@@ -33,6 +36,21 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navbar />
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <HeroSection />
+      </motion.div>
+      
+      <div className="reveal">
+        <HowItWorks />
+      </div>
+      
+      <div className="reveal">
+        <WhyChooseUs />
+      </div>
     </div>
   );
 };
